@@ -33,6 +33,7 @@ defaults
 frontend http-in
     bind *:8080
     mode http
+    option httpclose
 
     {{range $subdomain := ls "/$ETCD_KEY_PREFIX"}}
 
